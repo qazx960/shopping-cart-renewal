@@ -1,11 +1,12 @@
 import { ProductList } from "../components/ProductList";
-import { FilterTab } from "../components/FilterTab";
+// import { FilterTab } from "../components/FilterTab";
+import { FilterTabContainer } from "../components/FilterTabContainer";
 
 export const ProductsPage = () => {
   return (
-    <section>
-      <FilterTab />
+    <FilterTabContainer>
+      {/* <FilterTab /> */}
       <ProductList />
-    </section>
+    </FilterTabContainer>
   );
 };

@@ -3,8 +3,6 @@ import { ProductItem } from "./ProductItem";
 
 export const ProductList = () => {
   const { data: products, isLoading, isError } = useProductListQuery();
-  // console.log(products);
-  // const productId = products?.data?.id;
 
   if (isLoading) {
     return <h1>Loading...</h1>;

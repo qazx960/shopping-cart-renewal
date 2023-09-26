@@ -1,13 +1,13 @@
 import { useProductFilterListQuery } from "../hooks/useProductFilterListQuery";
 import { FilterTab } from "./FilterTab";
+import { FilterTabContainer } from "./FilterTabContainer";
 import { ProductItem } from "./ProductItem";
 
 export const ProductJewelryTabList = () => {
   const { data: jeweleryData } = useProductFilterListQuery(`jewelery`);
 
   return (
-    <>
-      <FilterTab />
+    <FilterTabContainer>
       <section className="p-10 flex items-center justify-evenly flex-wrap h-screen">
         {jeweleryData &&
           jeweleryData.data?.map((product) => {
@@ -18,6 +18,6 @@ export const ProductJewelryTabList = () => {
             );
           })}
       </section>
-    </>
+    </FilterTabContainer>
   );
 };
