@@ -1,13 +1,14 @@
 import { useProductFilterListQuery } from "../hooks/useProductFilterListQuery";
 import { FilterTab } from "./FilterTab";
+import { FilterTabContainer } from "./FilterTabContainer";
 import { ProductItem } from "./ProductItem";
 
 export const ProductWomensTabList = () => {
   const { data: womenProducts } = useProductFilterListQuery(`women's clothing`);
 
   return (
-    <>
-      <FilterTab />
+    <FilterTabContainer>
+
       <section className="p-10 flex items-center justify-evenly flex-wrap h-screen">
         {womenProducts &&
           womenProducts.data?.map((product) => {
@@ -18,6 +19,6 @@ export const ProductWomensTabList = () => {
             );
           })}
       </section>
-    </>
+    </FilterTabContainer>
   );
 };
