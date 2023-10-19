@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="bg-gray-200 h-[5rem] flex items-center justify-between px-[1.25rem] text-[18px]">
+    <header className="bg-gray-100 h-[5rem] flex items-center justify-between px-[1.25rem] text-[18px]">
       <div className="flex items-center gap-1.5">
         <FaShoppingBag size={28} />
         <Link to="/" className="text-[22px]">
@@ -20,7 +20,7 @@ export const Header = () => {
         </Link>
         {/* {showAddProductModal && <AddProduct />} */}
         <div className="flex items-center gap-1">
-          <Link to="/">
+          <Link to="/cart">
             <FaShoppingCart />
           </Link>
           <span>2</span>

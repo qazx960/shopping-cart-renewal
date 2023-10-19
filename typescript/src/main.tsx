@@ -10,6 +10,7 @@ import { ProductElectronicsList } from "./components/ProductElectronicsList.tsx"
 import { ProductJewelryTabList } from "./components/ProductJewelryTabList.tsx";
 import { ProductMensTabList } from "./components/ProductMensTabList.tsx";
 import { ProductWomensTabList } from "./components/ProductWomensTabList.tsx";
+import { CartsPage } from "./pages/CartsPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
         element: <ProductWomensTabList />,
       },
       { path: "/products/add", element: <AddProduct /> },
+      { path: "/cart", element: <CartsPage /> },
     ],
   },
 ]);
